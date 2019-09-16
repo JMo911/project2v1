@@ -9,7 +9,7 @@ module.exports = function(sequelize, DataTypes) {
     username: {
       type: DataTypes.STRING
     },
-    passowrd: {
+    password: {
       type: DataTypes.STRING
     }
   });
