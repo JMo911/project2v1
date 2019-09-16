@@ -22,8 +22,8 @@ app.use(express.static("public"));
 // Routes
 require("./routes/apiroutes")(app);
 
-
-db.sequelize.sync({ force: true }).then(function() {
+//if force is set to true, wipes our database every time
+db.sequelize.sync({ force: false }).then(function() {
   app.listen(PORT, function() {
     console.log("App listening on PORT " + PORT);
   });

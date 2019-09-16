@@ -18,12 +18,9 @@ class CreateUserPage extends React.Component {
         //allows us to stop the form submission from refreshing the page
         event.preventDefault();
         const data = this.state;
-        console.log(data);
-        // console.log("first name: " + data.firstname + "\nlast name: " + data.lastname + "\n username: " + data.username + "\n pass: " + data.password);
-        //need to send this user to the batabase with validation.. redirect back to create page if doesn't pass
         axios.post('http://localhost:8080/api/users', data)
           .then(function (response) {
-            console.log(response);
+            console.log(response.data);
           })
           .catch(function (error) {
             console.log(error);
